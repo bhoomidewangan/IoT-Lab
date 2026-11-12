@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "author": "IoT Lab",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "board",
+      "top": 80,
+      "left": 20,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 30,
+      "left": 365,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "res1",
+      "top": 180,
+      "left": 365,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot",
+      "top": 330,
+      "left": 365,
+      "attrs": {
+        "value": "512"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "board:13",
+      "res1:1",
+      "green",
+      []
+    ],
+    [
+      "res1:2",
+      "led1:A",
+      "green",
+      []
+    ],
+    [
+      "led1:C",
+      "board:GND.1",
+      "black",
+      []
+    ],
+    [
+      "pot:VCC",
+      "board:5V",
+      "red",
+      []
+    ],
+    [
+      "pot:GND",
+      "board:GND.2",
+      "black",
+      []
+    ],
+    [
+      "pot:SIG",
+      "board:A0",
+      "blue",
+      []
+    ]
+  ]
+}

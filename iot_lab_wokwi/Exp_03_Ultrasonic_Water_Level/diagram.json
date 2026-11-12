@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "author": "IoT Lab",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "board",
+      "top": 80,
+      "left": 20,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 30,
+      "left": 365,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "res1",
+      "top": 180,
+      "left": 365,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 330,
+      "left": 365,
+      "attrs": {
+        "color": "yellow"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "res2",
+      "top": 480,
+      "left": 365,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": 30,
+      "left": 555,
+      "attrs": {
+        "color": "green"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "res3",
+      "top": 180,
+      "left": 555,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "sonar",
+      "top": 330,
+      "left": 555,
+      "attrs": {
+        "distance": "20"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "board:2",
+      "res1:1",
+      "green",
+      []
+    ],
+    [
+      "res1:2",
+      "led1:A",
+      "green",
+      []
+    ],
+    [
+      "led1:C",
+      "board:GND.1",
+      "black",
+      []
+    ],
+    [
+      "board:3",
+      "res2:1",
+      "green",
+      []
+    ],
+    [
+      "res2:2",
+      "led2:A",
+      "green",
+      []
+    ],
+    [
+      "led2:C",
+      "board:GND.1",
+      "black",
+      []
+    ],
+    [
+      "board:4",
+      "res3:1",
+      "green",
+      []
+    ],
+    [
+      "res3:2",
+      "led3:A",
+      "green",
+      []
+    ],
+    [
+      "led3:C",
+      "board:GND.1",
+      "black",
+      []
+    ],
+    [
+      "sonar:VCC",
+      "board:5V",
+      "red",
+      []
+    ],
+    [
+      "sonar:GND",
+      "board:GND.2",
+      "black",
+      []
+    ],
+    [
+      "sonar:TRIG",
+      "board:9",
+      "green",
+      []
+    ],
+    [
+      "sonar:ECHO",
+      "board:10",
+      "blue",
+      []
+    ]
+  ]
+}

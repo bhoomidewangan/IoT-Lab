@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "author": "IoT Lab",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "board",
+      "top": 80,
+      "left": 20,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-analog-joystick",
+      "id": "joystick",
+      "top": 30,
+      "left": 365,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo",
+      "top": 180,
+      "left": 365,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [
+      "joystick:VCC",
+      "board:5V",
+      "red",
+      []
+    ],
+    [
+      "joystick:GND",
+      "board:GND.1",
+      "black",
+      []
+    ],
+    [
+      "joystick:HORZ",
+      "board:A0",
+      "blue",
+      []
+    ],
+    [
+      "servo:V+",
+      "board:5V",
+      "red",
+      []
+    ],
+    [
+      "servo:GND",
+      "board:GND.2",
+      "black",
+      []
+    ],
+    [
+      "servo:PWM",
+      "board:9",
+      "orange",
+      []
+    ]
+  ]
+}

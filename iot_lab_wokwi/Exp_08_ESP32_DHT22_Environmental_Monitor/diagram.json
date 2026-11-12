@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "author": "IoT Lab",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "board",
+      "top": 80,
+      "left": 20,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht",
+      "top": 30,
+      "left": 365,
+      "attrs": {
+        "temperature": "28",
+        "humidity": "60"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "dht:VCC",
+      "board:3V3",
+      "red",
+      []
+    ],
+    [
+      "dht:GND",
+      "board:GND.1",
+      "black",
+      []
+    ],
+    [
+      "dht:SDA",
+      "board:4",
+      "green",
+      []
+    ]
+  ]
+}

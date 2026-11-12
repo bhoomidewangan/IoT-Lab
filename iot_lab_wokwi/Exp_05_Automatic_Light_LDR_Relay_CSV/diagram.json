@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "author": "IoT Lab",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "board",
+      "top": 80,
+      "left": 20,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr",
+      "top": 30,
+      "left": 365,
+      "attrs": {
+        "lux": "500"
+      }
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay",
+      "top": 180,
+      "left": 365,
+      "attrs": {
+        "transistor": "pnp"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "lamp",
+      "top": 330,
+      "left": 365,
+      "attrs": {
+        "color": "yellow"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "res",
+      "top": 480,
+      "left": 365,
+      "attrs": {
+        "value": "220"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "ldr:VCC",
+      "board:5V",
+      "red",
+      []
+    ],
+    [
+      "ldr:GND",
+      "board:GND.1",
+      "black",
+      []
+    ],
+    [
+      "ldr:AO",
+      "board:A0",
+      "blue",
+      []
+    ],
+    [
+      "relay:VCC",
+      "board:5V",
+      "red",
+      []
+    ],
+    [
+      "relay:GND",
+      "board:GND.2",
+      "black",
+      []
+    ],
+    [
+      "relay:IN",
+      "board:7",
+      "green",
+      []
+    ],
+    [
+      "board:8",
+      "res:1",
+      "green",
+      []
+    ],
+    [
+      "res:2",
+      "lamp:A",
+      "green",
+      []
+    ],
+    [
+      "lamp:C",
+      "board:GND.3",
+      "black",
+      []
+    ]
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "author": "IoT Lab",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "board",
+      "top": 80,
+      "left": 20,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gas-sensor",
+      "id": "mq2",
+      "top": 30,
+      "left": 365,
+      "attrs": {
+        "ppm": "400"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "alarm",
+      "top": 180,
+      "left": 365,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "res",
+      "top": 330,
+      "left": 365,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzzer",
+      "top": 480,
+      "left": 365,
+      "attrs": {
+        "volume": "0.5"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "mq2:VCC",
+      "board:5V",
+      "red",
+      []
+    ],
+    [
+      "mq2:GND",
+      "board:GND.1",
+      "black",
+      []
+    ],
+    [
+      "mq2:AOUT",
+      "board:A0",
+      "blue",
+      []
+    ],
+    [
+      "board:8",
+      "res:1",
+      "green",
+      []
+    ],
+    [
+      "res:2",
+      "alarm:A",
+      "green",
+      []
+    ],
+    [
+      "alarm:C",
+      "board:GND.2",
+      "black",
+      []
+    ],
+    [
+      "board:9",
+      "buzzer:2",
+      "orange",
+      []
+    ],
+    [
+      "buzzer:1",
+      "board:GND.3",
+      "black",
+      []
+    ]
+  ]
+}

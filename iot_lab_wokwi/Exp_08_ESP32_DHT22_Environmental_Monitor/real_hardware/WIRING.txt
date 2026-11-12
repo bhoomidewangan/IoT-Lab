@@ -1,0 +1,5 @@
+DHT22: ESP32 3V3 -> VCC, GND -> GND, GPIO4 -> DATA (add 10k pullup for bare sensor).
+For EACH ESP32 + SX1278: 3V3->VCC, GND->GND, GPIO18->SCK, GPIO19->MISO, GPIO23->MOSI, GPIO5->NSS/CS, GPIO14->RST, GPIO26->DIO0.
+Never connect SX1278 VCC to 5V. Use appropriate antenna and legally permitted frequency/configuration.
+The receiver and transmitter use separate ESP32 devices.
+Arduino libraries on physical hardware: LoRa (Sandeep Mistry), DHT sensor library, Adafruit Unified Sensor as applicable.
